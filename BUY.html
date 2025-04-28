@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>GARAGE 52</title>
+    <link rel="stylesheet" href="BUY.CSS" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="top-row">
+          <div class="logo-section">
+            <img src="LOGO.png" alt="Логотип" class="logo" />
+          </div>
+          <div class="site-title">GARAGE 52</div>
+          <div class="contact-info">
+            <p>Тел: +8 (800) 555-35-35</p>
+            <p>Email: garage52@mail.ru</p>
+          </div>
+        </div>
+
+        <nav class="nav-buttons">
+          <a href="main.html"><button>Главная</button></a>
+          <a href="Tuning.html"><button>Тюнинг</button></a>
+          <a href="Detail.html"><button>Детали</button></a>
+          <a href="#"><button>Корзина</button></a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="order-container">
+      <h1>Оформление заказа</h1>
+
+      <form class="order-form" id="orderForm">
+        <h2>Контактные данные</h2>
+
+        <div class="form-group">
+          <label for="firstName">Имя:</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Фамилия:</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Телефон:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="+7 (XXX) XXX-XX-XX"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Адрес доставки:</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Комментарий к заказу:</label>
+          <textarea id="comments" name="comments" rows="3"></textarea>
+        </div>
+
+        <div class="payment-method">
+          <h3>Способ оплаты:</h3>
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="payment" value="card" checked />
+              Банковская карта
+            </label>
+            <label>
+              <input type="radio" name="payment" value="cash" />
+              Наличными при получении
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-order">Подтвердить заказ</button>
+      </form>
+    </div>
+
+    <footer class="static-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <p>Адрес: г. Нижний новгород, <br />ул. Московское шоссе, д. 1</p>
+          <p>Контакты: +7(999)-123-32-12</p>
+          <p>Ссылка на соцсети:</p>
+          <div class="social-icons">
+            <a href="#"><img src="Vk_picto.png" alt="Вконтакте" /></a>
+            <a href="#"><img src="TG_picto.png" alt="Телеграм" /></a>
+            <a href="#"><img src="WA_picto.png" alt="WhatsApp" /></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <p>Карта местоположения:</p>
+          <img
+            src="Карта_адресса.PNG"
+            alt="Карта адреса"
+            width="200"
+            height="170"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Здесь можно добавить обработку формы (отправку на сервер и т.д.)
+          alert(
+            "Ваш заказ успешно оформлен! Мы свяжемся с вами для подтверждения."
+          );
+
+          // Перенаправление на главную страницу
+          window.location.href = "main.html";
+        });
+    </script>
+  </body>
+</html>
